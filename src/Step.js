@@ -129,17 +129,9 @@ export default class Step extends Component {
     return (
       <div style={ styles.step }>
         <div style={ circleStyle }>
-        {active || completed ? (
-          <a href={href} onClick={onClick} style={ styles.index }>{ index + 1 }</a>
-        ) : (
-          <span style={ styles.index }>{ index + 1 }</span>
-        )}
+        <a href={href} onClick={onClick} style={ styles.index }>{ index + 1 }</a>
         </div>
-        {active || completed ? (
-          <a href={href} onClick={onClick} style={ titleStyle }>{ title }</a>
-        ) : (
-          <div style={ titleStyle }>{ title }</div>
-        )}
+        <a href={href} onClick={onClick} style={ titleStyle }>{ title }</a>
         { !first && <div style={ leftStyle }></div> }
         { !isLast && <div style={ rightStyle }></div> }
       </div>
