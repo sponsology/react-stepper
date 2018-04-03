@@ -37,7 +37,7 @@ function Stepper({
             href={step.href}
             onClick={step.onClick}
             active={!(disabledSteps || []).includes(index) && index === activeStep}
-            completed={!(disabledSteps || []).includes(index) && ((completedSteps || []).includes(index) || index < activeStep)}
+            completed={!(disabledSteps || []).includes(index) && (completedSteps || []).includes(index)}
             first={index === 0}
             isLast={index === steps.length - 1}
             index={index}
